@@ -4,19 +4,19 @@ description: "Operator-led advisory for organisations building across Southeast 
 sections:
   - type: hero
     eyebrow: "Southeast Asia · Global Connections"
-    title: "Build with the region in the room"
+    title: "Market Access, Built on Experience"
     lead: "Oak Ridges Advisory helps leaders enter markets, build ventures, and turn innovation into operating businesses across Southeast Asia. Our work draws on regional relationships and decades of executive, investment, and trade experience."
     primary: { label: "Discuss your plans", url: /contact/ }
     secondary: { label: "Explore our services", url: /services/ }
     facts:
-      - { value: "SEA", label: "On-the-ground perspective" }
-      - { value: "Global", label: "Deep cross-border ties" }
-      - { value: "Built", label: "By operators" }
+      - { value: "25+ yrs", label: "On-the-ground in Southeast Asia" }
+      - { value: "3x", label: "Multiple on invested capital" }
+      - { value: "15+", label: "New ventures launched" }
 
   - type: services
     eyebrow: "Where we work"
-    title: "Three domains. One regional perspective."
-    lead: "Our work centres on financial services, energy, and food and agriculture. We support leaders with market entry, venture building, and AI and innovation across these domains."
+    title: "Three sectors. One regional perspective."
+    lead: "Our work centres on financial services, energy, and food and agriculture. We support leaders with market entry, venture and product commercialization, leveraging AI and innovation across these domains."
     tone: muted
     limit: 6
     link: { label: "See all advisory services", url: /services/ }
