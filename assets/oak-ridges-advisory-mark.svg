@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-labelledby="title desc">
+  <title id="title">Oak Ridges Advisory standalone mark</title>
+  <desc id="desc">Circular emblem made from three abstract ridgelines.</desc>
+  <circle cx="210" cy="210" r="190" fill="#F6F3EC"/>
+  <clipPath id="circleClip"><circle cx="210" cy="210" r="190"/></clipPath>
+  <g clip-path="url(#circleClip)">
+    <path d="M20 194c53-39 107-74 172-111 36 5 72 22 105 50-61-14-112-9-165 15-42 19-77 31-112 46Z" fill="#1F5A45"/>
+    <path d="M20 244c46-30 94-50 140-59 39-7 82-5 123 14-58 6-110 22-161 50-36 20-67 25-102 27Z" fill="#283D56"/>
+    <path d="M142 258c58-38 119-62 176-67 46-5 92 5 138 32-67 0-126 11-183 32-47 17-88 19-131 3Z" fill="#B28A45"/>
+  </g>
+</svg>

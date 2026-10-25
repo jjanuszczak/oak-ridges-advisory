@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-pico-corp"]
+	path = themes/hugo-theme-pico-corp
+	url = https://github.com/PhantomPixelDev/hugo-theme-pico-corp.git

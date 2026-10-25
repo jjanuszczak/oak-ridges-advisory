@@ -1,0 +1,11 @@
+{{ define "main" }}
+  {{ partial "page-header.html" . }}
+
+  <section class="section">
+    <div class="container prose prose--wide">
+      {{ .Content }}
+    </div>
+  </section>
+
+  {{ partial "cta.html" . }}
+{{ end }}

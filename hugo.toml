@@ -1,0 +1,106 @@
+baseURL = 'https://oakridgesadvisory.com/'
+title = 'Oak Ridges Advisory'
+theme = 'hugo-theme-pico-corp'
+locale = 'en-CA'
+defaultContentLanguage = 'en'
+timeZone = 'Asia/Manila'
+
+enableRobotsTXT = true
+summaryLength = 24
+capitalizeListTitles = false
+
+[pagination]
+  pagerSize = 6
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = false
+
+[[menu.main]]
+  name = 'Services'
+  pageRef = '/services'
+  weight = 10
+[[menu.main]]
+  name = 'About'
+  pageRef = '/about'
+  weight = 20
+[[menu.main]]
+  name = 'Contact'
+  pageRef = '/contact'
+  weight = 30
+
+[[menu.footer]]
+  name = 'Market Entry'
+  pageRef = '/services/market-entry'
+  weight = 10
+  [menu.footer.params]
+    group = 'Services'
+[[menu.footer]]
+  name = 'Venture Building'
+  pageRef = '/services/venture-building'
+  weight = 20
+  [menu.footer.params]
+    group = 'Services'
+[[menu.footer]]
+  name = 'AI & Innovation'
+  pageRef = '/services/ai-innovation'
+  weight = 30
+  [menu.footer.params]
+    group = 'Services'
+[[menu.footer]]
+  name = 'About'
+  pageRef = '/about'
+  weight = 40
+  [menu.footer.params]
+    group = 'Firm'
+[[menu.footer]]
+  name = 'Contact'
+  pageRef = '/contact'
+  weight = 50
+  [menu.footer.params]
+    group = 'Firm'
+
+[params]
+  description = 'Oak Ridges Advisory helps organisations build and grow across Southeast Asia in financial services, energy, and food and agriculture.'
+  companyName = 'Oak Ridges Advisory'
+  legalName = 'Oak Ridges Advisory'
+  tagline = 'Southeast Asian markets. Canadian roots. Operator experience.'
+  headingFont = 'serif'
+  primaryColor = '#1f5a45'
+  primaryColorDark = '#b28a45'
+  defaultScheme = 'system'
+  showSchemeToggle = true
+  showBreadcrumbs = true
+  showReadingTime = false
+  showRelated = true
+
+  [params.seo]
+    titleSeparator = '·'
+    organizationType = 'ProfessionalService'
+
+  [params.cta]
+    eyebrow = 'Start a conversation'
+    title = 'A market question, a venture, or a transition to lead?'
+    text = 'Tell us what you are trying to build or change. We will be direct about where our experience can help.'
+    primaryLabel = 'Contact Oak Ridges'
+    primaryURL = '/contact/'
+
+  [params.footer]
+    text = 'Independent advisory for organisations building across Southeast Asia.'
+
+  [params.analytics]
+    plausibleDomain = ''
+    googleAnalyticsID = ''
+
+  [params.contactForm]
+    action = ''
+    method = 'POST'
+    netlify = false

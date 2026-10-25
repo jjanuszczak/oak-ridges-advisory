@@ -1,0 +1,165 @@
+/* Home page globe backdrop. The theme palette variables make the fade follow
+   the active light/dark scheme while keeping the full page legible. */
+:root {
+  --oak-ridges-forest: #1f5a45;
+  --oak-ridges-navy: #283d56;
+  --oak-ridges-brass: #b28a45;
+
+  /* The circular mark is the visual anchor for the site header. */
+  --pc-header-height: 5rem;
+
+  --globe-left-fade-near: 97%;
+  --globe-left-fade-mid: 82%;
+  --globe-right-fade-mid: 48%;
+  --globe-right-fade-edge: 16%;
+  --globe-mobile-fade-near: 92%;
+  --globe-mobile-fade-mid: 78%;
+  --globe-mobile-right-fade: 45%;
+}
+
+.brand__logo {
+  display: block;
+  width: 6.25rem;
+  height: auto;
+  flex: 0 0 6.25rem;
+}
+
+.brand__logo--dark {
+  display: none;
+}
+
+[data-theme="dark"] .brand__logo--light {
+  display: none;
+}
+
+[data-theme="dark"] .brand__logo--dark {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .brand__logo--light {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]) .brand__logo--dark {
+    display: block;
+  }
+}
+
+.brand__name {
+  color: var(--pc-text);
+  font-family: var(--pc-font-display);
+  font-size: var(--pc-text-md);
+  font-weight: var(--pc-weight-display);
+  letter-spacing: var(--pc-tracking-tight);
+  white-space: nowrap;
+}
+
+.site-footer__logo {
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 2.75rem;
+  object-fit: contain;
+}
+
+@media (max-width: 48rem) {
+  .brand__logo {
+    width: 5rem;
+    flex-basis: 5rem;
+  }
+
+  .brand__name {
+    font-size: var(--pc-text-sm);
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --globe-left-fade-near: 94%;
+    --globe-left-fade-mid: 78%;
+    --globe-right-fade-mid: 30%;
+    --globe-right-fade-edge: 0%;
+    --globe-mobile-fade-near: 90%;
+    --globe-mobile-fade-mid: 76%;
+    --globe-mobile-right-fade: 35%;
+  }
+}
+
+[data-theme="dark"] {
+  --globe-left-fade-near: 94%;
+  --globe-left-fade-mid: 78%;
+  --globe-right-fade-mid: 30%;
+  --globe-right-fade-edge: 0%;
+  --globe-mobile-fade-near: 90%;
+  --globe-mobile-fade-mid: 76%;
+  --globe-mobile-right-fade: 35%;
+}
+
+.site-main:has(> .hero) {
+  position: relative;
+  isolation: isolate;
+}
+
+.site-main:has(> .hero)::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(
+      90deg,
+      var(--pc-bg) 0%,
+      color-mix(in srgb, var(--pc-bg) var(--globe-left-fade-near), transparent) 24%,
+      color-mix(in srgb, var(--pc-bg) var(--globe-left-fade-mid), transparent) 40%,
+      color-mix(in srgb, var(--pc-bg) var(--globe-right-fade-mid), transparent) 63%,
+      color-mix(in srgb, var(--pc-bg) var(--globe-right-fade-edge), transparent) 88%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--pc-bg) 8%, transparent) 48%,
+      color-mix(in srgb, var(--pc-bg) 62%, transparent) 76%,
+      var(--pc-bg) 100%
+    ),
+    url("../images/digital-globe.jpg");
+  background-position: center top, center top, right top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.site-main:has(> .hero) .section--muted {
+  background: transparent;
+}
+
+.site-main:has(> .hero) .process__step::before {
+  background-color: transparent;
+}
+
+/* Keep the fixed home-page backdrop behind the page chrome. */
+.site-main:has(> .hero) ~ .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 48rem) {
+  .site-main:has(> .hero)::before {
+    background-image:
+      linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--pc-bg) var(--globe-mobile-fade-near), transparent) 0%,
+        color-mix(in srgb, var(--pc-bg) var(--globe-mobile-fade-mid), transparent) 48%,
+        color-mix(in srgb, var(--pc-bg) var(--globe-mobile-right-fade), transparent) 100%
+      ),
+      linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--pc-bg) 10%, transparent) 34%,
+        color-mix(in srgb, var(--pc-bg) 82%, transparent) 72%,
+        var(--pc-bg) 100%
+      ),
+      url("../images/digital-globe.jpg");
+    background-position: center top, center top, 68% top;
+    background-size: cover, cover, auto 78vh;
+  }
+}

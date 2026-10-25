@@ -1,0 +1,30 @@
+<header class="site-header" data-site-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ site.Home.RelPermalink }}">
+      <img class="brand__logo brand__logo--light" src="{{ "images/oak-ridges-advisory-mark-horizontal.png?v=2" | relURL }}"
+        width="100" height="39" alt="{{ site.Params.companyName | default site.Title }}" />
+      <img class="brand__logo brand__logo--dark" src="{{ "images/oak-ridges-advisory-mark-horizontal-dark.png?v=1" | relURL }}"
+        width="100" height="39" alt="" aria-hidden="true" />
+      <span class="brand__name">{{ site.Params.companyName | default site.Title }}</span>
+    </a>
+
+    {{ partial "nav.html" . }}
+
+    <div class="site-header__actions">
+      {{ if site.Params.showSchemeToggle | default true }}
+        {{ partial "scheme-toggle.html" . }}
+      {{ end }}
+      <button
+        class="icon-button nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="{{ i18n "menu" }}"
+        data-nav-toggle>
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  {{ partial "nav-mobile.html" . }}
+</header>
