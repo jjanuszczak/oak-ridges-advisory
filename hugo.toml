@@ -100,7 +100,7 @@ capitalizeListTitles = false
 
   [params.analytics]
     plausibleDomain = ''
-    googleAnalyticsID = ''
+    googleAnalyticsID = 'G-F7DY4GLNCJ'
 
   [params.contactForm]
     action = ''
